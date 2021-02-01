@@ -12,14 +12,12 @@ public class CameraTransformation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //ustawiam wyjsciowy offset na pozycje w relacji do pozycji gracza
         offset = transform.position - player.transform.position;        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //przesuwam kamere względem gracza
         transform.position = player.transform.position + offset;
     }
 }

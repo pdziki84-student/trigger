@@ -5,23 +5,21 @@ using UnityEngine.UI;
 
 public class PointController : MonoBehaviour
 {
-    //zdobyte punkty
-    private static int _pointsEarned;   
+    private static int _points;   
 
     // Start is called before the first frame update
     void Start()
     {
-        _pointsEarned = 0;
+        _points = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //kontrolka wyswietlajaca punkty
-        GameObject.Find("PointsCounter").GetComponent<Text>().text = _pointsEarned.ToString();
+        GameObject.Find("PointsCounter").GetComponent<Text>().text = _points.ToString();
     }
 
     public static void AddPoint() => AddPoints(1);
 
-    public static void AddPoints(int points) => _pointsEarned += points;
+    public static void AddPoints(int points) => _points += points;
 }
